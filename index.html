@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>3D Academy</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+
+        <div class="logo">
+            <span class="logo-3d">3D</span>
+            <span class="logo-text">ACADEMY</span>
+        </div>
+
+        <nav class="navigation">
+            <a href="#" onclick="showHome()">Início</a>
+            <a href="#">Cursos</a>
+            <a href="#">Minhas Montagens</a>
+        </nav>
+
+        <div class="profile">
+            <div class="profile-icon">T</div>
+            <span>Meu Perfil</span>
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         PÁGINA INICIAL
+    ========================== -->
+
+    <main id="home-page">
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="small-title">
+                    APRENDIZADO • PRÁTICA • EXPERIÊNCIA
+                </span>
+
+                <h1>
+                    Aprenda na prática.
+                    <span>Monte em 3D.</span>
+                </h1>
+
+                <p>
+                    A 3D Academy é um ambiente virtual desenvolvido
+                    para transformar o aprendizado em uma experiência
+                    prática e interativa.
+                </p>
+
+                <button class="main-button" onclick="scrollToThemes()">
+                    Começar agora
+                    <span>→</span>
+                </button>
+
+            </div>
+
+            <div class="hero-decoration">
+
+                <div class="cube">
+                    <div class="cube-face front"></div>
+                    <div class="cube-face back"></div>
+                    <div class="cube-face right"></div>
+                    <div class="cube-face left"></div>
+                    <div class="cube-face top"></div>
+                    <div class="cube-face bottom"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ESCOLHA DA ÁREA -->
+
+        <section class="themes" id="themes">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="small-title">EXPLORE</span>
+
+                    <h2>
+                        Escolha uma área para aprender
+                    </h2>
+                </div>
+
+                <p>
+                    Selecione uma área para visualizar
+                    os ambientes disponíveis.
+                </p>
+
+            </div>
+
+
+            <div class="theme-grid">
+
+                <!-- TECNOLOGIA -->
+
+                <article class="theme-card">
+
+                    <div class="theme-icon">
+                        &lt;/&gt;
+                    </div>
+
+                    <span class="theme-number">01</span>
+
+                    <h3>Tecnologia</h3>
+
+                    <p>
+                        Explore montagens e componentes
+                        de computadores em ambientes virtuais.
+                    </p>
+
+                    <button
+                        class="theme-link"
+                        onclick="openCourse('tecnologia')">
+
+                        Explorar área →
+
+                    </button>
+
+                </article>
+
+
+                <!-- ODONTOLOGIA -->
+
+                <article class="theme-card">
+
+                    <div class="theme-icon">
+                        ✚
+                    </div>
+
+                    <span class="theme-number">02</span>
+
+                    <h3>Odontologia</h3>
+
+                    <p>
+                        Explore ambientes virtuais voltados
+                        para práticas odontológicas.
+                    </p>
+
+                    <button
+                        class="theme-link"
+                        onclick="openCourse('odontologia')">
+
+                        Explorar área →
+
+                    </button>
+
+                </article>
+
+
+                <!-- MECÂNICA -->
+
+                <article class="theme-card">
+
+                    <div class="theme-icon">
+                        ⚙
+                    </div>
+
+                    <span class="theme-number">03</span>
+
+                    <h3>Mecânica</h3>
+
+                    <p>
+                        Explore motores e sistemas mecânicos
+                        através de ambientes virtuais.
+                    </p>
+
+                    <button
+                        class="theme-link"
+                        onclick="openCourse('mecanica')">
+
+                        Explorar área →
+
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         PÁGINA DE ESCOLHA
+    ========================== -->
+
+    <main id="course-page" class="course-page hidden">
+
+        <section class="course-selection">
+
+            <button class="back-button" onclick="showHome()">
+                ← Voltar
+            </button>
+
+            <span class="small-title" id="course-label">
+                TECNOLOGIA
+            </span>
+
+            <h1 id="course-title">
+                Escolha um ambiente
+            </h1>
+
+            <p id="course-description">
+                Escolha uma opção para iniciar sua experiência.
+            </p>
+
+
+            <!-- MODELOS -->
+
+            <div class="models-grid" id="models-container">
+
+                <!-- Os modelos serão criados pelo JavaScript -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         PÁGINA DO AMBIENTE
+    ========================== -->
+
+    <main id="environment-page" class="environment-page hidden">
+
+        <section class="environment">
+
+            <button class="back-button" onclick="backToModels()">
+                ← Voltar
+            </button>
+
+            <span class="small-title">
+                AMBIENTE VIRTUAL
+            </span>
+
+            <h1 id="environment-title">
+                Gabinete 1
+            </h1>
+
+            <div class="environment-box">
+
+                <div class="environment-placeholder">
+                    3D
+                </div>
+
+                <h2>
+                    Ambiente de aprendizagem
+                </h2>
+
+                <p>
+                    Este espaço será utilizado futuramente
+                    para a montagem e interação em 3D.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer class="footer">
+
+        <div class="logo">
+            <span class="logo-3d">3D</span>
+            <span class="logo-text">ACADEMY</span>
+        </div>
+
+        <p>
+            Aprender fazendo. Experienciar para entender.
+        </p>
+
+        <span class="copyright">
+            ©️ 2026 3D Academy
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
