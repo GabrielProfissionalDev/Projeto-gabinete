@@ -1,0 +1,2 @@
+# Projeto estático: não há dependências Python externas.
+# O servidor HTTP usado para executá-lo faz parte da biblioteca padrão do Python.
